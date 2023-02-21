@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=width-device, initial-scale=1.0"> 
+        <title>CSS - Flex Items</title>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+    </head>
+
+    <body>
+        <h1>Flexible Items</h1>
+        <p>All direct children of a flexible container becomes flexible items.</p>
+
+        <h2>The Order Property</h2>
+        <p>Use the Order Property to sort the flex items as you lke:</p>
+        <div class="flex-container1">
+            <div style="order: 4">1</div>
+            <div style="order: 1">2</div>
+            <div style="order: 2">3</div>
+            <div style="order: 3">4</div>
+        </div>
+
+        <h2>The Flex-glow Property</h2>
+        <P>The flex-grow Property specifies how much a flex item will grow relative to the rest of flex items.</P>
+        <p>The value must be a number, default value is 0.</p>
+        <div class="flex-container2">
+            <div style="flex-grow: 0">1</div>
+            <div style="flex-grow: 2">2</div>
+            <div style="flex-grow: 6">3</div>
+            <div style="flex-grow: 0">4</div>
+        </div>
+
+        <h2>The Flex-shrink Property</h2>
+        <p>The Flex-shrink Property specifies how much a flex item will shrink relative to the rest of the flex items.</p>
+        <p>The value must be a number, default value is 1.</p>
+
+        <p>Do not let the third flex item shrink as much as the other flex items.</p>
+
+        <div class="flex-container3">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </div>
+
+       
+    </body>
+</html>

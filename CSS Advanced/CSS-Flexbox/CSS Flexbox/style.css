@@ -1,0 +1,64 @@
+
+/*
+-
+-
+*/
+
+body {
+    background-color: linen;
+    color: maroon;
+}
+
+.flex-container {
+    background-color: DodgerBlue;
+
+    height: 500px;
+
+    display: flex;
+    /*flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;*/
+    flex-flow:row wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+    align-content: space-between;
+
+
+}
+
+
+/*A single-line comment*/
+.flex-container > div{
+    background-color: #f1f1f1;
+    color: red; /*Text Color    */
+    width: 100px;
+
+
+    margin: 10px;
+    padding: 20px;
+
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+
+}
+
+.flex-container #first{
+    font-size: 10px;
+
+    padding: 10px;
+}
+
+.flex-container #fifth{
+    font-size: 80px;
+
+    padding: 5px;
+}
+
+.flex-container #eighth{
+    font-size: 125px;
+
+    padding: 60px;
+}
+
+
+
