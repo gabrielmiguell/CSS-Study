@@ -3,7 +3,8 @@
     <head>
         <style>
             body{
-                background: dodgerblue;
+                background: #1d2a35!important;
+                color: #fff!important;
                 padding: 0px 0px 5000px 0px;
 
 
@@ -18,38 +19,56 @@
                 color: black;
             }
 
+            code{
+                background: rgba(222,222,222,0.1);
+                color:#ff9999;
+            }
         </style>
 
     </head>
     <body>
+
+        <div>
+            <h1>CSS Position</h1>
+            <p>There are five different position values:</p>
+            <ul>
+                <li><code>static</code></li>
+                <li><code>relative</code></li>
+                <li><code>fixed</code></li>
+                <li><code>absolute</code></li>
+                <li><code>sticky</code></li>
+            </ul>
+            <p>Elements are then positioned using the top, right, bottom and leff properties. These properties will not work unless the <code style="background:rgba(222,222,222,0.1); color:#ff9999;">position</code> is set first. They also work differently depending on the position value.</p>
+        </div>
         <div>
             <h2>position: static;</h2>
-            <p>An element with position static; is not positioned in any special way; it is always positioned according to the normal flow of the page:</p>
+            <p>HTML elements are positioned static by default.</p>
+            <p>An element with <code>position static;</code> is not positioned in any special way; it is always positioned according to the normal flow of the page:</p>
             <div class="static" style="border: 3px solid #73AD21; position:static; left: 00px; right: 50px;">This div element has position: static;</div>
         </div>
         <div>
             <h2>position: relative;</h2>
-            <p>An element with position: relative; is positioned relative to its normal position.</p>
+            <p>An element with <code>position: relative;</code> is positioned relative to its normal position.</p>
             <p>Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position.</p>
             <p>Other content will not be adjusted to fit into any gap left by the element.</p>
             <div class="relative" style="border: 3px solid #73AD21; position:relative; left:0px; bottom: 50px; top: 0px; float: right; background: red;" >This div element has position: relative;</div>
         </div>
 
         <div>
-        <h2>position:fixed;</h2>
-        <p>An element with position:fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.</p>
-        <p>A fixed element does not leave a gap in the page where it would normally have been located.</p>
-        <p>Notice the fixed element in the lower-right corner of the page. Here is the CSS that is used.</p>
-        <div class="fixed" style="border: 3px solid #73AD21; position: fixed; right: 0; bottom: 0;" >This div has position: fixed;</div>
+            <h2>position: fixed;</h2>
+            <p>An element with position:fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.</p>
+            <p>A fixed element does not leave a gap in the page where it would normally have been located.</p>
+            <p>Notice the fixed element in the lower-right corner of the page. Here is the CSS that is used.</p>
+            <div class="fixed" style="border: 3px solid #73AD21; position: fixed; right: 0; bottom: 0;" >This div has position: fixed;</div>
         </div>
 
 
         <div>
             <h2>position: absolute;</h2>
-            <p>An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).</p>
+            <p>An element with <code>position: absolute;</code> is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).</p>
             <p>However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.</p>
 
-            <p>NOTE: Absolute positioned elements are removed from the normal flow, and can overlap elements.</p>
+            <p><b>NOTE:</b> Absolute positioned elements are removed from the normal flow, and can overlap elements.</p>
             <p>Here's a simple example:</p>
             <div class="relative" style="border: 3px solid #73AD21; position: relative; width:400px; height: 200px;" >"This div element has possition: relative;"
                 <div class="relative" style="border: 3px ridge #73AD21; position: relative; top: 100px; left: 100px; width: 150px; height: 50px;">This div element has position: relative;</div>
@@ -57,31 +76,37 @@
             </div>
         </div>
 
-        <div style="padding-bottom: 200px; background: yellowgreen;">
+        <div style="padding-bottom: 200px; background: teal;">
             <h2>position: sticky</h2>
             <div class="sticky" style="border: 3px solid #4caf50; background: #cae8ca; position: -webkit-sticky; position: sticky; top: 0; padding: 5px;">I'm sticky</div>
 
-            <div style=" background: yellow;">An element with position: sticky; is positioned based on the user's scroll position.</div> 
-            <p>A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticky" in place (like position:fixed).</p>
+            <div style=" background: thistle;">An element with <code>position: sticky;</code> is positioned based on the user's scroll position.</div> 
+            <p>A sticky element toggles between <code>relative</code> and <code>fixed</code>, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticky" in place (like position:fixed).</p>
 
-            <p>NOTE: Internet Explorer doesn't support sticky positioning. Safari requires a -webkit- prefix (see example below). You must also specify at least one of top, right, bottom or left for sticky positioning to work.</p>
-            <p>In this example, the sticky element sticks to the top of the page (top: 0), when you reach it scroll position.</p>
+            <p><b>NOTE:</b> Internet Explorer doesn't support sticky positioning. Safari requires a -webkit- prefix (see example below). You must also specify at least one of <code>top</code>, <code>right</code>, <code>bottom</code> or <code>left</code> for sticky positioning to work.</p>
+            <p>In this example, the sticky element sticks to the top of the page (<code>top: 0</code>), when you reach it scroll position.</p>
 
         </div>
 
         <div class="positionImage">
             <h2>Positioning Text In an Image</h2>
             <div class="container" style="position:relative;">
-            <img src="https://www.w3schools.com/css/img_5terre_wide.jpg" alt="Cinque Terre"  style="width: 100%; height: auto; opacity: 0.5;">
-            <div class="topleft" style="position:absolute; top:0; padding: 10px;">Top Left</div>
-            <div class="topright" style="position: absolute; top:0; right:0; padding: 10px;">Top Right</div>
-            <div class="bottomleft" style="position:absolute; bottom:0; left:0; padding: 10px;">Bottom Left</div>
-            <div class="bottomright" style="position:absolute; bottom:0; right:0; padding: 10px;">Botoom Right</div>
-            <div class="centered" style="background: transparent; position:absolute; top:50%; width:100%; text-align:center; ">Centered</div>
-
+                <img src="https://www.w3schools.com/css/img_5terre_wide.jpg" alt="Cinque Terre"  style="width: 100%; height: auto; opacity: 0.5;">
+                <div class="topleft" style="background: red; position:absolute; top:0; padding: 10px;">Top Left</div>
+                <div class="topright" style="background:purple; position: absolute; top:10px; right:10px; padding:0;">Top Right</div>
+                <div class="bottomleft" style="background:green;position:absolute; bottom:10px; left:10px; padding:0px;">Bottom Left</div>
+                <div class="bottomright" style="background:blue;position:absolute; bottom:10px; right:10px; padding:0;">Botoom Right</div>
+                <div class="centered" style="background:pink; position:absolute; top:50%; width:100%; text-align:center; ">Centered</div>
             </div>
+
         </div>
 
+
+<h3>All CSS Positioning Properties</h3>
+<p><a href="./relative subject/clip-path-property.html">clip</a></p>
+
+
+ 
     </body>
 
 </html>
