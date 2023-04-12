@@ -14,7 +14,7 @@
             body{
                 background: #1d2a35!important;
                 color: #fff!important;
-                padding: 0px 0px 5000px 0px;
+                padding: 0px 0px 0px 0px;
 
 
             }
@@ -22,6 +22,11 @@
             code{
                 background: rgba(222,222,222,0.1);
                 color:#ff9999;
+            }
+
+            a{
+                font-style:normal;
+                text-decoration: none;
             }
 
 
@@ -32,56 +37,140 @@
         <div>
             <h2>CSS clip-path Property</h2>
             <h3>Definition and Usage</h3>
+            <p>The <code>clip-path</code> property creates a clipping region that sets what part of an element should be shown. Parts that are inside the region are shown, while those outside are hidden.</p>
             <p>The <code>clip-path</code> property lets you clip an element to a basic shape or an SVG source.</p>
             <p><b>NOTE:</b> The <code>clip-path</code> property will replace the deprecated <code>clip</code> property.</p>
-            <div style="display:flex; flex-direction:column;">
-            <img src="https://i.pinimg.com/564x/59/b8/d9/59b8d9a67bea04c0ce288a6aca0fa1a0.jpg" alt="" width="300" height="auto" style="background: red; clip-path:circle(50%)">
 
-            <img src="https://i.pinimg.com/564x/bf/69/b1/bf69b1b3b117291cbb1a47506076a8a8.jpg" alt="" width="200" height="auto">
+        </div>
+        <div>
+            <h2>Sintax</h2>
+            <p>The <code>clip-path</code> property is specified as one or a combination of the values listed below.</p>
 
-
-            <h3>Animation of clip-path</h3>
-            <img src="https://i.pinimg.com/564x/2a/92/46/2a924697231318a61f80051327c1efb7.jpg" width="400">
-
-            <div>
-                <h3>Using The clip-path Property With Value circle()</h3>
-                <p>clip-path: circle(50%)</p>
-                <img src="https://i.pinimg.com/564x/ff/c4/68/ffc468ea5867d14444979973c4d620b6.jpg" alt="" width="300" style="clip-path:circle(50%)">
-
-                <p>clip-path: circle(40%)</p>
-                <img src="https://i.pinimg.com/564x/ff/c4/68/ffc468ea5867d14444979973c4d620b6.jpg" alt="" width="300" style="clip-path:circle(40%);">
-
-                <p>clip-path: circle(20%)</p>
-                <img src="https://i.pinimg.com/564x/ff/c4/68/ffc468ea5867d14444979973c4d620b6.jpg" alt="" width="300" style="clip-path:circle(20%)">
-            </div>
-
-            <div>
-                <h3>Using The clip-path Property With Value ellipse()</h3>
-                <p></p>
-                <img src="https://i.pinimg.com/564x/0b/05/ad/0b05ad8e7bdca8223543fc93ba942aef.jpg" alt="" width="500" height="auto" style="clip-path:ellipse(50% 25% at 400px 500px)"> <!--Os dois primeiro números são as circuferências e os outros dois números são onde selecionamos qual posição da imagem monstraremos.-->
+        </div>
+        
+        <div>
+            <h2>Values</h2>
+            
+            <div class="clip-sourse">
+                <p><code>&#60;clip-source&#62;</code></p>
+                <p>A <code>url()</code> referencing an SVG <code>&#60;clip-path&#62;</code> element.</p>
 
             </div>
 
-            <div>
-                <img src="https://i.pinimg.com/564x/f8/ba/87/f8ba87b01760bacf9b257662728e775a.jpg" alt="">
+            
+            <div class="basic-shape" style="display:flex; flex-direction:column;">
+                    <h3><code>&#60;basic-shape&#62;</code></h3>
+                    <p>A shape whose size and position is defined by the <code>&#60;geometry-box&#62;</code> value. If no geometry box is specified, the <code>border-box</code> will be used as the reference box. One of:</p>
+
+                
+                    <div class="insetValue">
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/basic-shape/inset"><p><code>inset(.)</code></p></a>    
+                        <p>Defines an inset rectangle.</p>
+                        <img src="https://i.pinimg.com/564x/8e/f2/73/8ef273e49c016422f13ff6c2c34e1a5a.jpg" alt="" style="clip-path:inset(5% 20% 45% 30%);">
+
+                        <img src="https://i.pinimg.com/564x/e1/f2/34/e1f23461669ad11fa93efec53871e313.jpg" alt="">      
+
+                    </div>
+
+
+                    <div class="circleValue">
+                        <!--<h3>Using The clip-path Property With Value circle()</h3>-->
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/basic-shape/circle"><p><code>circle(.)</code></p></a>
+                        <p>Defines a circle using a radius and a position.</p>
+
+                        <p>clip-path: circle(50%)</p>
+                        <img src="https://i.pinimg.com/564x/ff/c4/68/ffc468ea5867d14444979973c4d620b6.jpg" alt="" width="300" style="clip-path:circle(50%)">
+
+                        <p>clip-path: circle(40%)</p>
+                        <img src="https://i.pinimg.com/564x/ff/c4/68/ffc468ea5867d14444979973c4d620b6.jpg" alt="" width="300" style="clip-path:circle(35% at 55% 20%);">
+
+                        <p>clip-path: circle(20%)</p>
+                        <img src="https://i.pinimg.com/564x/ff/c4/68/ffc468ea5867d14444979973c4d620b6.jpg" alt="" width="300" style="clip-path:circle(20% at 54% 25%)">
+
+                        <img src="https://i.pinimg.com/564x/59/b8/d9/59b8d9a67bea04c0ce288a6aca0fa1a0.jpg" alt="" width="300" height="auto" style="background: red; clip-path:circle(25% at 51.5% 49%)">
+
+                        <img src="https://i.pinimg.com/564x/bf/69/b1/bf69b1b3b117291cbb1a47506076a8a8.jpg" alt="" width="200" height="auto" style="clip-path:circle(20% at 55% 20%);">
+        
+
+                        <div>
+                            <h3>Animation of clip-path</h3>
+                            <img src="https://i.pinimg.com/564x/2a/92/46/2a924697231318a61f80051327c1efb7.jpg" width="400">
+
+                        </div>
+
+                        <div>
+                            <h4>Change clip-path with JavaScript</h4>
+                            <p>Click the "Try It" button to clip the image element:</p>
+                            <button onclick="myFunction()">Try It</button>
+                            <img id="myImage" src="https://i.pinimg.com/564x/f9/d9/7a/f9d97ad4ef79542912cff0bbeb6adcbe.jpg" alt="" width="300">
+                
+                
+                
+                            <img src="https://i.pinimg.com/564x/8b/66/29/8b6629054bbff5a9fad04ac8d3a7acfb.jpg" alt="" width="300" >
+                                        
+                        </div>
+
+
+                    </div>
+
+                    <div class="ellipseValue">
+
+                        <!--<h3>Using The clip-path Property With Value ellipse()</h3>-->
+                        <p><code>ellipse(.)</code></p>
+                        <p>Defines an ellipse using two radii and a position.</p>
+                        <img src="https://i.pinimg.com/564x/0b/05/ad/0b05ad8e7bdca8223543fc93ba942aef.jpg" alt="" width="500" height="auto" style="clip-path:ellipse(50% 25% at 400px 500px)"> <!--Os dois primeiro números são os raios e os outros dois números são utilizados para selecionamos a posição do círculo na imagem monstrada.-->
+
+                        <img src="https://i.pinimg.com/564x/f9/0d/df/f90ddf79458dbbd4eaed524a68ad86d9.jpg" alt="" style="clip-path:ellipse(25% 40% at 50% 50%);">
+
+                        <img src="https://i.pinimg.com/564x/2d/27/74/2d277473a7de0bc97f73dd6f807e073c.jpg" alt="" style="clip-path:ellipse(25% 25% at 50% 50%);">
+    
+                    </div>
+
+
+                    <div class="polygonValue">
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/basic-shape/polygon"><p><code>polygon(.)</code></p></a>
+                        <p>Defines a polygon using an SVG filling rule and a set of vertices.</p>
+                        <img src="https://i.pinimg.com/564x/f8/ba/87/f8ba87b01760bacf9b257662728e775a.jpg" alt="" style="clip-path:polygon(50% 0%, 0% 100%, 100% 100%)">
+
+                        <img src="https://i.pinimg.com/564x/cd/fc/7f/cdfc7f8fcf4d2400fe8ecba63f1bb597.jpg" alt="" style="clip-path:polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)">
+
+
+                    </div>
+
+                    
+                    <div class="pathValue">
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/path"><p><code>path(.)</code></p></a>
+                        <p>Defines a shape using an optional SVG path definition.</p>
+
+                    </div> 
+
+
+    
+
+
+            </div>
+
+            
+            <div class="geometry-box">
+                <h3><code>&#60;geometry-box&#62;</code></h3>
+
+            </div>
+            <div class="none">  
+
+
             </div>
 
 
 
 
+        </div>
 
-            <h4>Change clip-path with JavaScript</h4>
-            <p>Click the "Try It" button to clip the image element:</p>
-            <button onclick="myFunction()">Try It</button>
-            <img id="myImage" src="https://i.pinimg.com/564x/f9/d9/7a/f9d97ad4ef79542912cff0bbeb6adcbe.jpg" alt="" width="300">
-
-
-
-            <img src="https://i.pinimg.com/564x/8b/66/29/8b6629054bbff5a9fad04ac8d3a7acfb.jpg" alt="" width="300" >
-
-            </div>
-
+        <div class="source">
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path" ><p>developer.mozilla.org - clip-path</p></a>
+        <a href="https://www.w3schools.com/cssref/css3_pr_clip-path.php"><p>w3schools.org</p></a>
         </div>    
+
+
 
         <footer>
             <p>Created by Gabriel Miguel</p>
