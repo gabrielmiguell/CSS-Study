@@ -1,6 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="'UTF-8">
+        <meta http-equiv="X-UA-Compatible" IE="edge">
+        <meta name="viewport" content="width=width-device, initial-scale=1.0">  
+        <meta name="author" content="Gabriel Miguel">
+        <meta name="keywords" content="CSS, CSS clip-path, clip-path property">
+        <meta name="description" content="">
+
+        <title>CSS - clip-path Property</title>
+
         <style>
             body{
                 background: #1d2a35!important;
@@ -34,7 +43,31 @@
             <h3>Animation of clip-path</h3>
             <img src="https://i.pinimg.com/564x/2a/92/46/2a924697231318a61f80051327c1efb7.jpg" width="400">
 
-            <img src="https://i.pinimg.com/564x/ff/c4/68/ffc468ea5867d14444979973c4d620b6.jpg" alt="" width="300">
+            <div>
+                <h3>Using The clip-path Property With Value circle()</h3>
+                <p>clip-path: circle(50%)</p>
+                <img src="https://i.pinimg.com/564x/ff/c4/68/ffc468ea5867d14444979973c4d620b6.jpg" alt="" width="300" style="clip-path:circle(50%)">
+
+                <p>clip-path: circle(40%)</p>
+                <img src="https://i.pinimg.com/564x/ff/c4/68/ffc468ea5867d14444979973c4d620b6.jpg" alt="" width="300" style="clip-path:circle(40%);">
+
+                <p>clip-path: circle(20%)</p>
+                <img src="https://i.pinimg.com/564x/ff/c4/68/ffc468ea5867d14444979973c4d620b6.jpg" alt="" width="300" style="clip-path:circle(20%)">
+            </div>
+
+            <div>
+                <h3>Using The clip-path Property With Value ellipse()</h3>
+                <p></p>
+                <img src="https://i.pinimg.com/564x/0b/05/ad/0b05ad8e7bdca8223543fc93ba942aef.jpg" alt="" width="500" height="auto" style="clip-path:ellipse(50% 25% at 400px 500px)"> <!--Os dois primeiro números são as circuferências e os outros dois números são onde selecionamos qual posição da imagem monstraremos.-->
+
+            </div>
+
+            <div>
+                <img src="https://i.pinimg.com/564x/f8/ba/87/f8ba87b01760bacf9b257662728e775a.jpg" alt="">
+            </div>
+
+
+
 
 
             <h4>Change clip-path with JavaScript</h4>
@@ -49,6 +82,13 @@
             </div>
 
         </div>    
+
+        <footer>
+            <p>Created by Gabriel Miguel</p>
+            <p>&copy; All Rights Reserved.</p>
+
+
+        </footer>
         
 <script>
     function myFunction() {
